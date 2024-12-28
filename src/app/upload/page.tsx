@@ -37,7 +37,7 @@ const UploadPhoto: React.FC<ImageUploadProps> = () => {
         }
     };
 
-    const handleFolderPathChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleFolderPathChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setFolderPath(event.target.value);
     };
 
@@ -91,9 +91,9 @@ const UploadPhoto: React.FC<ImageUploadProps> = () => {
             <div style={{ margin: '14px 0 14px 0', width: '100%' }}>
                 <label id="folder-path-label">Folder Path</label>
                 <select
-                    labelId="folder-path-label"
+
                     value={folderPath}
-                    label="Folder Path"
+
                     onChange={handleFolderPathChange}
                 >
                     {folderOptions.map((option) => (
