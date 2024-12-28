@@ -1,16 +1,24 @@
 
+'use client'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import React, { useState } from 'react';
-import { storage } from './firebase';
+import { storage } from '../../firebase';
 
 interface ImageUploadProps { }
 
 export const folderOptions = [
-    { value: 'suits', label: 'Suits' },
-    { value: 'agbada', label: 'Agbada' },
-    { value: 'twopiece', label: 'Twopiece' },
-    { value: 'senator', label: 'Senator' },
-    { value: 'ankara', label: 'Ankara' },
+    { value: 'tees', label: 'tees' },
+    { value: 'tshirts', label: 'tshirts' },
+    { value: 'jeans', label: 'jeans' },
+    { value: 'unisex', label: 'unisex' },
+    { value: 'pam', label: 'pam' },
+    { value: 'cap', label: 'cap' },
+    { value: 'hoddy', label: 'hoddy' },
+    { value: 'sneakers', label: 'sneakers' },
+    { value: 'luxuryshoes', label: 'luxuryshoes' },
+    { value: 'maleshorts', label: 'maleshorts' },
+    { value: 'necklace', label: 'necklace' },
+    { value: 'earrings', label: 'earrings' },
 ];
 
 const UploadPhoto: React.FC<ImageUploadProps> = () => {
