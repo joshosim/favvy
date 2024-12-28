@@ -3,6 +3,7 @@
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import React, { useState } from 'react';
 import { storage } from '../../firebase';
+import Image from 'next/image'
 
 interface ImageUploadProps { }
 
@@ -92,7 +93,6 @@ const UploadPhoto: React.FC<ImageUploadProps> = () => {
                     labelId="folder-path-label"
                     value={folderPath}
                     label="Folder Path"
-
                     onChange={handleFolderPathChange}
                 >
                     {folderOptions.map((option) => (
@@ -118,7 +118,7 @@ const UploadPhoto: React.FC<ImageUploadProps> = () => {
                     <ul>
                         {imageUrls.map((imageUrl, index) => (
                             <li key={index}>
-                                <img src={imageUrl} alt={`Image ${index + 1}`} style={{ maxWidth: '200px' }} />
+                                <Image src={imageUrl} alt={`Image ${index + 1}`} style={{ maxWidth: '200px' }} />
                             </li>
                         ))}
                     </ul>

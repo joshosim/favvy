@@ -20,9 +20,9 @@ export const Hero = () => {
         <div className='md:flex items-center'>
           <div className='md:w-[478px]'>
             <div className="tag">Version 1.0 is here</div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">Favvy's Apparrel</h1>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">Favvy&apos;s Apparrel</h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-              Experience the Art of Fashion with Favvy's Apparels - Your Premier Destination for
+              Experience the Art of Fashion with Favvy&apos;s Apparels - Your Premier Destination for
               Style, Comfort, and Elegance.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
