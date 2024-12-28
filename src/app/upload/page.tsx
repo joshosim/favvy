@@ -7,26 +7,27 @@ import Image from 'next/image'
 
 interface ImageUploadProps { }
 
-export const folderOptions = [
-    { value: 'tees', label: 'tees' },
-    { value: 'tshirts', label: 'tshirts' },
-    { value: 'jeans', label: 'jeans' },
-    { value: 'unisex', label: 'unisex' },
-    { value: 'pam', label: 'pam' },
-    { value: 'cap', label: 'cap' },
-    { value: 'hoddy', label: 'hoddy' },
-    { value: 'sneakers', label: 'sneakers' },
-    { value: 'luxuryshoes', label: 'luxuryshoes' },
-    { value: 'maleshorts', label: 'maleshorts' },
-    { value: 'necklace', label: 'necklace' },
-    { value: 'earrings', label: 'earrings' },
-];
-
 const UploadPhoto: React.FC<ImageUploadProps> = () => {
     const [images, setImages] = useState<File[] | null>(null);
     const [progress, setProgress] = useState(0);
     const [imageUrls, setImageUrls] = useState<string[]>([]);
-    const [folderPath, setFolderPath] = useState<string>('suits'); // Default folder
+    const [folderPath, setFolderPath] = useState<string>('suits');
+
+    const folderOptions = [
+        { value: 'tees', label: 'tees' },
+        { value: 'tshirts', label: 'tshirts' },
+        { value: 'jeans', label: 'jeans' },
+        { value: 'unisex', label: 'unisex' },
+        { value: 'pam', label: 'pam' },
+        { value: 'cap', label: 'cap' },
+        { value: 'hoddy', label: 'hoddy' },
+        { value: 'sneakers', label: 'sneakers' },
+        { value: 'luxuryshoes', label: 'luxuryshoes' },
+        { value: 'maleshorts', label: 'maleshorts' },
+        { value: 'necklace', label: 'necklace' },
+        { value: 'earrings', label: 'earrings' },
+    ];
+
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
